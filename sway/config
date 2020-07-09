@@ -81,7 +81,7 @@ output "*" bg ~/Pictures/wallpaper.png fill
 #
 # Example configuration:
 #
-   input "2:14:SynPS/2_Synaptics_TouchPad" {
+   input "ELAN1300:00 04F3:3059 Touchpad" {
        dwt enabled
        tap enabled
        natural_scroll enabled
@@ -126,7 +126,6 @@ output "*" bg ~/Pictures/wallpaper.png fill
     bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
@@ -185,8 +184,8 @@ output "*" bg ~/Pictures/wallpaper.png fill
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Ctrl+space floating toggle
-
+    bindsym $mod+Shift+S floating toggle
+    bindsym $mod+Down focus down
     # Swap focus between the tiling area and the floating area
     bindsym $mod+Alt+space focus mode_toggle
 
@@ -255,3 +254,5 @@ bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+bindsym $mod+f exec dolphin
