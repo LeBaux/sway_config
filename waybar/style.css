@@ -1,4 +1,4 @@
-* {
+	* {
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
@@ -13,7 +13,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-}
+}transition
 
 window#waybar.hidden {
     opacity: 0.2;
@@ -124,20 +124,20 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: #90b1b1;
+    /*color: #000000;*/
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: #b19090;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: #90b1a1;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: #90a1b1;
 }
 
 #network.disconnected {
@@ -145,12 +145,12 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: #b1a190;
+    /*color: #000000;*/
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: #b1b190;
     color: #2a5c45;
 }
 
@@ -169,7 +169,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: #b1b190;
 }
 
 #temperature.critical {
@@ -177,7 +177,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: #55a5d9;
 }
 
 #idle_inhibitor {
