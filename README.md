@@ -1,4 +1,5 @@
-# Sway and Waybar configuration
+# Sway desktop configuration
+![Alt text](screenshot.png?raw=true "Title")
 
 <h5>Optionnal but recommended</h5>
 <ul>
@@ -8,9 +9,8 @@
 	<li>brightnessctl</li>
 	<li><a href='https://github.com/AppleDesignResources/SanFranciscoFont'>Font</a></li>
 </ul>
-<br>
 All available on the Archs repositories
-<br>
+<br><br>
 If you have Qt apps that are displayed in the desired theme
 <ol>
 	<li>Install qt5ct</li>
