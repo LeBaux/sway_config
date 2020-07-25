@@ -15,12 +15,11 @@ exec ulauncher --hide-window
 
 # Floating windows
 for_window [app_id="ulauncher"] floating enable; border none
-for_window [app_id="Desktop — Plasma"] kill; floating enable; border none
-for_window [app_id="plasmashell"] floating enable;
-for_window [app_id="Plasma"] floating enable; border none
-for_window [app_id="krunner"] floating enable; border none
-for_window [app_id="Kmix"] floating enable; border none
-for_window [app_id="plasmashell" window_type="notification"] floating enable, 
+#for_window [app_id="Desktop — Plasma"] kill; floating enable; border none
+#for_window [app_id="plasmashell"] floating enable;
+#for_window [app_id="Plasma"] floating enable; border none
+#for_window [app_id="krunner"] floating enable; border none
+#for_window [app_id="plasmashell" window_type="notification"] floating enable, 
 no_focus [app_id="plasmashell" window_type="notification"] 
 
 ### Variables
@@ -33,7 +32,7 @@ set $down k
 set $up i
 set $right l
 # Your preferred terminal emulator
-set $term konsole
+set $term termite
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -41,8 +40,7 @@ set $menu ulauncher-toggle  --
 
 # Disable titlebar
 
-default_border pixel
-
+default_border pixel 3
 # Set inner/feher gaps
 gaps inner 10
 gaps outer 0
@@ -55,7 +53,7 @@ gaps outer 0
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg ~/Pictures/wallpaper.png fill
+output "*" bg ~/wallpapers/next.jpg fill
 #
 # Example configuration:
 #
@@ -81,7 +79,7 @@ output "*" bg ~/Pictures/wallpaper.png fill
 #
 # Example configuration:
 #
-   input "ELAN1300:00 04F3:3059 Touchpad" {
+   input "1267:12377:ELAN1300:00_04F3:3059_Touchpad" {
        dwt enabled
        tap enabled
        natural_scroll enabled
@@ -104,6 +102,9 @@ output "*" bg ~/Pictures/wallpaper.png fill
     # Start your launcher
     bindsym $mod+Space exec $menu
 
+	# Launch Dolphin
+	bindsym $mod+d exec dolphin
+	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -126,6 +127,7 @@ output "*" bg ~/Pictures/wallpaper.png fill
     bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
@@ -184,8 +186,8 @@ output "*" bg ~/Pictures/wallpaper.png fill
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+S floating toggle
-    bindsym $mod+Down focus down
+    bindsym $mod+Shift+M floating toggle
+
     # Swap focus between the tiling area and the floating area
     bindsym $mod+Alt+space focus mode_toggle
 
@@ -249,10 +251,8 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
-bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +1%
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 1%-
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-bindsym $mod+f exec dolphin

@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: rgba(43, 48, 59, 0.8);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -36,9 +36,10 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
-
+	
 #workspaces button {
-    padding: 0 5px;
+	padding-left: 0px;
+	padding-right: 0px;
     background-color: transparent;
     color: #ffffff;
     border-bottom: 3px solid transparent;
@@ -90,11 +91,13 @@ window#waybar.chromium {
 
 #clock {
     background-color: #64727D;
+    border-radius: 10px;
 }
 
 #battery {
-    background-color: #ffffff;
+    background-color: #CDCDCD;
     color: #000000;
+    border-radius: 10px;
 }
 
 #battery.charging {
@@ -125,19 +128,23 @@ label:focus {
 
 #cpu {
     background-color: #90b1b1;
+    border-radius: 10px;
     /*color: #000000;*/
 }
 
 #memory {
     background-color: #b19090;
+    border-radius: 10px;
 }
 
 #backlight {
     background-color: #90b1a1;
+    border-radius: 10px;
 }
 
 #network {
     background-color: #90a1b1;
+    border-radius: 10px;
 }
 
 #network.disconnected {
@@ -147,6 +154,7 @@ label:focus {
 #pulseaudio {
     background-color: #b1a190;
     /*color: #000000;*/
+    border-radius: 10px;
 }
 
 #pulseaudio.muted {
@@ -170,6 +178,7 @@ label:focus {
 
 #temperature {
     background-color: #b1b190;
+	border-radius: 10px;
 }
 
 #temperature.critical {
@@ -177,11 +186,13 @@ label:focus {
 }
 
 #tray {
-    background-color: #55a5d9;
+    background-color: #6b8697;
+    border-radius: 10px;
 }
 
 #idle_inhibitor {
     background-color: #2d3436;
+    border-radius: 10px;
 }
 
 #idle_inhibitor.activated {
@@ -192,6 +203,7 @@ label:focus {
 #mpd {
     background-color: #66cc99;
     color: #2a5c45;
+    border-radius: 10px;
 }
 
 #mpd.disconnected {
