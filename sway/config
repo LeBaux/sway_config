@@ -39,9 +39,9 @@ set $menu wofi --show run  --
 
 # Disable titlebar
 
-default_border pixel 2
+default_border pixel 3
 # Set inner/feher gaps
-gaps inner 10
+gaps inner 15
 gaps outer 0
 
 # Window decoration
@@ -194,7 +194,7 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+M floating toggle
+    bindsym alt+Space floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+Alt+space focus mode_toggle

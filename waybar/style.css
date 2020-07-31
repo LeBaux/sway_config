@@ -1,11 +1,9 @@
 	* {
     border: none;
     border-radius: 0;
-    margin-top: 2px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: San Francisco Text,Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
+    font-family: Google Sans Medium, San Francisco Text,Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
 }
 
 window#waybar {
@@ -39,8 +37,7 @@ window#waybar.chromium {
 }
 	
 #workspaces button {
-	margin-left: 5px;
-	margin-top: 0;
+	margin: 10 0 10 10;
 	/* padding-left: 3px; */
 	/* padding-right: 3px; */
 	/* padding-top: 3px; */
@@ -53,7 +50,7 @@ window#waybar.chromium {
 
 #window {
 	margin-left: 10px;
-	padding-bottom: 2px;
+	padding-bottom: 1px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -96,14 +93,16 @@ window#waybar.chromium {
 }
 
 #clock {
+	border: 10px solid transparent;
     background-color: #64727D;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #battery {
+	border: 10px solid transparent;
     background-color: #CDCDCD;
     color: #000000;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #battery.charging {
@@ -133,24 +132,28 @@ label:focus {
 }
 
 #cpu {
+	border: 10px solid transparent;
     background-color: #404552;
-    border-radius: 10px;
+    border-radius: 15px;
     /*color: #000000;*/
 }
 
 #memory {
+	border: 10px solid transparent;
     background-color: #4b5162;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #backlight {
+	border: 10px solid transparent;
     background-color: #CDCDCD;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #network {
+	border: 10px solid transparent;
     background-color: #4b5162;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #network.disconnected {
@@ -158,9 +161,10 @@ label:focus {
 }
 
 #pulseaudio {
+	border: 10px solid transparent;
     background-color: #7c818c;
     /*color: #000000;*/
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #pulseaudio.muted {
@@ -169,6 +173,7 @@ label:focus {
 }
 
 #custom-media {
+	border: 3px solid transparent;
     background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
@@ -176,6 +181,7 @@ label:focus {
 
 #custom-media.custom-spotify {
     background-color: #66cc99;
+    border-radius: 10px;
 }
 
 #custom-media.custom-vlc {
@@ -183,8 +189,9 @@ label:focus {
 }
 
 #temperature {
+	border: 10px solid transparent;
     background-color: #7c818c;
-	border-radius: 10px;
+	border-radius: 15px;
 }
 
 #temperature.critical {
@@ -192,13 +199,15 @@ label:focus {
 }
 
 #tray {
+	border: 10px solid transparent;
     background-color: #5294e2;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #idle_inhibitor {
+	border: 10px solid transparent;
     background-color: #2d3436;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #idle_inhibitor.activated {
@@ -207,9 +216,10 @@ label:focus {
 }
 
 #mpd {
+	border: 10px solid transparent;
     background-color: #66cc99;
     color: #2a5c45;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #mpd.disconnected {
