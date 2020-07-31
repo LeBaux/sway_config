@@ -1,9 +1,9 @@
 	* {
-	margin-left: 1px;
+	/* margin-left: 1px; */
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Google Sans Medium, San Francisco Text,Roboto, Helvetica, Arial, sans-serif;
+    font-family: Product Sans Medium,Google Sans Medium, San Francisco Text,Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
@@ -52,7 +52,6 @@ window#waybar.chromium {
 #window {
 	font-size: 15;
 	margin-left: 10px;
-	padding-bottom: 1px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -96,7 +95,7 @@ window#waybar.chromium {
 
 #clock {
 	border: 10px solid transparent;
-    background-color: #64727D;
+    background-color: #383c4a;
     border-radius: 15px;
 }
 
@@ -208,7 +207,7 @@ label:focus {
 
 #idle_inhibitor {
 	border: 10px solid transparent;
-    background-color: #2d3436;
+    background-color: #404552;
     border-radius: 15px;
 }
 

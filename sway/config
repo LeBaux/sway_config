@@ -13,13 +13,15 @@ exec --no-startup-id nm-applet
 exec kded5
 
 # Floating windows
-#for_window [app_id="ulauncher"] floating enable; border none
-#for_window [app_id="Desktop — Plasma"] kill; floating enable; border none
-#for_window [app_id="plasmashell"] floating enable;
-#for_window [app_id="Plasma"] floating enable; border none
-#for_window [app_id="krunner"] floating enable; border none
-#for_window [app_id="plasmashell" window_type="notification"] floating enable, 
-no_focus [app_id="plasmashell" window_type="notification"] 
+# for_window [app_id="ulauncher"] floating enable; border none
+# for_window [app_id="Desktop — Plasma"] kill; floating enable; border none
+for_window [app_id="plasmashell"] floating enable;
+for_window [app_id="Plasma"] floating enable; border none
+# for_window [app_id="krunner"] floating enable; border none
+for_window [app_id="plasmashell" window_type="notification"] floating enable 
+no_focus [app_id="plasmashell" window_type="notification"] floating enable
+for_window [app_id="wine"] floating enable
+for_window [app_id="epicgamelauncher.exe"] floating enable
 
 ### Variables
 #
@@ -39,7 +41,7 @@ set $menu wofi --show run  --
 
 # Disable titlebar
 
-default_border pixel 3
+default_border pixel 2
 # Set inner/feher gaps
 gaps inner 15
 gaps outer 0
@@ -47,9 +49,9 @@ gaps outer 0
 # Window decoration
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #5294e2 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #383c4a #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #383c4a #222222 #888888 #292d2e   #222222
+client.focused          #5294e2 #285577 #ffffff #2e9ef4   #5294e2
+client.focused_inactive #383c4a #5f676a #ffffff #484e50   #383c4a
+client.unfocused        #383c4a #222222 #888888 #292d2e   #383c4a
 client.urgent           #7c818c #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -73,11 +75,11 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' \
-               resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+         # timeout 300 'swaylock -f -c 000000' \
+         # timeout 600 'swaymsg "output * dpms off"' \
+              # resume 'swaymsg "output * dpms on"' \
+         # before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -182,8 +184,8 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym alt+c splith
-    bindsym alt+v splitv
+    bindsym $mod+c splith
+    bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
