@@ -12,9 +12,9 @@
 </ul>
 All available on Arch's repositories
 <h5>Easy install</h5>
-1. ```git clone https://github.com/snakedye/sway_config.git```
-2. ```chmod +x install.sh ```
-3. ```./install.sh```
+1. `git clone https://github.com/snakedye/sway_config.git`
+2. `chmod +x install.sh`
+3. `./install.sh`
 <h5>If you have Qt apps that aren't displayed in the desired theme</h5>
 <ol>
 	<li>Install qt5ct</li>
