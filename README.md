@@ -24,3 +24,4 @@ All available on Arch's repositories
 	<li>Refresh sway (ctrl+Shift+C)</li>
 </ol>
 <br>
+<p>For Firefox, copy both folders inside ~/.mozilla/firefox/{randomstring}.default-release and restart Firefox</p>
