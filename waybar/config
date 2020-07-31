@@ -1,7 +1,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)		
-    "height": 45, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1260, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
@@ -61,7 +61,7 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+         "spacing": 10
     },
     "clock": {
         // "timezone": "America/New_York",

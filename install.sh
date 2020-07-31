@@ -9,3 +9,5 @@ cp -r ./sway ~/.config/
 cp -r ./waybar ~/.config/
 
 cp -r ./wofi ~/.config/
+
+echo "Done!"
