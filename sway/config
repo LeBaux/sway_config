@@ -52,7 +52,7 @@ gaps outer 0
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg ~/Pictures/minimal_mountain.jpg fill
+output "*" bg ~/wallpapers/minimal_mountain.jpg fill
 #
 # Example configuration:
 #
