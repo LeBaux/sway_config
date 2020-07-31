@@ -4,16 +4,18 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+default_orientation vertical
+
 # Autostart
 
 exec /usr/lib/kdeconnectd
 #exec kdeconnectcli
 #exec ulauncher --hide-window
-exec --no-startup-id nm-applet
+exec --no-startip-id nm-applet
 #exec kded5
 
 # Floating windows
-#for_window [app_id="ulauncher"] floating enable; border none
+for_window [app_id="ulauncher"] floating enable; border none
 #for_window [app_id="Desktop — Plasma"] kill; floating enable; border none
 #for_window [app_id="plasmashell"] floating enable;
 #for_window [app_id="Plasma"] floating enable; border none
@@ -35,7 +37,7 @@ set $term termite
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run  --
+set $menu ulauncher-toggle  --
 
 # Disable titlebar
 
@@ -46,7 +48,7 @@ gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
-# gaps inner 10
+# gaps inner all set 10
 # gaps outer all plus 10
 
 ### Output configuration
@@ -102,7 +104,7 @@ output "*" bg ~/Pictures/minimal_mountain.jpg fill
     bindsym $mod+Space exec $menu
 
 	# Launch Dolphin
-	bindsym $mod+d exec thunar
+	bindsym $mod+d exec dolphin
 	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -144,16 +146,16 @@ output "*" bg ~/Pictures/minimal_mountain.jpg fill
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym Tab+1 workspace 1
+    bindsym Tab+2 workspace 2
+    bindsym Tab+3 workspace 3
+    bindsym Tab+4 workspace 4
+    bindsym Tab+5 workspace 5
+    bindsym Tab+6 workspace 6
+    bindsym Tab+7 workspace 7
+    bindsym Tab+8 workspace 8
+    bindsym Tab+9 workspace 9
+    bindsym Tab+0 workspace 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2
@@ -173,8 +175,8 @@ output "*" bg ~/Pictures/minimal_mountain.jpg fill
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym alt+c splith
-    bindsym alt+v splitv
+    bindsym $mod+v splith
+    bindsym $mod+c splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
