@@ -10,7 +10,7 @@ exec /usr/lib/kdeconnectd
 #exec kdeconnectcli
 #exec ulauncher --hide-window
 exec --no-startup-id nm-applet
-#exec kded5
+exec kded5
 
 # Floating windows
 #for_window [app_id="ulauncher"] floating enable; border none
@@ -39,10 +39,19 @@ set $menu wofi --show run  --
 
 # Disable titlebar
 
-default_border pixel 3
+default_border pixel 2
 # Set inner/feher gaps
 gaps inner 10
 gaps outer 0
+
+# Window decoration
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #5294e2 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #383c4a #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #383c4a #222222 #888888 #292d2e   #222222
+client.urgent           #7c818c #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -78,12 +87,12 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
 #
 # Example configuration:
 #
-#   input "1267:12377:ELAN1300:00_04F3:3059_Touchpad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+   input "1267:12377:ELAN1300:00_04F3:3059_Touchpad" {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+   }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -93,7 +102,7 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
 # Basics:
 #
     # Launch a terminal
-    bindsym alt+Space exec $term
+    bindsym ctrl+Space exec $term
 
     # Kill focused window
     bindsym $mod+X kill
