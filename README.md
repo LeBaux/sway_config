@@ -20,8 +20,7 @@ All available on Arch's repositories
 <h5>If you have Qt apps that aren't displayed in the desired theme</h5>
 <ol>
 	<li>Install qt5ct</li>
-	<li>Go in ~/.config/environment.d</li>
-	<li>Create a .conf file</li>
+	<li>Go in /etc/environment</li>
 	<li>Add QT_QPA_PLATFORMTHEME=qt5ct and save</li>
 	<li>Refresh sway (ctrl+Shift+C)</li>
 </ol>
