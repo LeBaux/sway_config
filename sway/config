@@ -7,7 +7,7 @@
 # Autostart
 
 exec /usr/lib/kdeconnectd
-#exec kdeconnectcli
+exec kdeconnect-indicator
 #exec ulauncher --hide-window
 exec --no-startup-id nm-applet
 exec kded5
@@ -41,7 +41,7 @@ set $menu wofi --dmenu --show drun -I  --
 
 # Disable titlebar
 
-default_border pixel 2
+default_border pixel 3
 # Set inner/feher gaps
 gaps inner 15
 gaps outer 0
@@ -49,9 +49,9 @@ gaps outer 0
 # Window decoration
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #5294e2 #285577 #ffffff #2e9ef4   #5294e2
-client.focused_inactive #383c4a #5f676a #ffffff #484e50   #383c4a
-client.unfocused        #383c4a #222222 #888888 #292d2e   #383c4a
+client.focused          #5294e2 #285577 #ffffff #7c818c   #5294e2
+client.focused_inactive #383c4a #5f676a #ffffff #7c818c   #383c4a
+client.unfocused        #383c4a #222222 #888888 #7c818c   #383c4a
 client.urgent           #7c818c #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -113,7 +113,7 @@ exec swayidle -w \
     bindsym $mod+Space exec $menu
 
 	# Launch Dolphin
-	bindsym $mod+d exec thunar
+	bindsym $mod+d exec dolphin
 	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -184,8 +184,8 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+c splith
-    bindsym $mod+v splitv
+    bindsym $mod+v splith
+    bindsym $mod+c splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
