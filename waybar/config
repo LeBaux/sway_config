@@ -11,13 +11,13 @@
      "sway/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
-         "format": "{name}: {icon}",
+         "format": "{icon}",
          "format-icons": {
-             "1:web": "",
-             "2:work": "🖿",
-             "3:launcher": "",
-             "4:game": "🎮",
-             "5:terminals": "",
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
              "focused": "",
              "urgent": "",
              "default": ""
