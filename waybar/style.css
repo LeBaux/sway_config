@@ -43,15 +43,14 @@ window#waybar.chromium {
 	/* padding-left: 3px; */
 	/* padding-right: 3px; */
 	/* padding-top: 3px; */
-	padding: 3px;
+	padding: 5px 10px 5px 10px;
 	border-radius: 5px;
     background-color: #4b5162;
     color: #ffffff;
-    /* border-bottom: 3px solid transparent; */
+    border: 1px solid #404552;
 }
 
 #window {
-	font-size: 15;
 	margin-left: 10px;
 }
 
@@ -88,6 +87,8 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
+#custom-weather
+#disk
 #mpd {
     padding: 0 10px;
     margin: 0 4px;
@@ -98,6 +99,7 @@ window#waybar.chromium {
 	border: 10px solid transparent;
     background-color: #383c4a;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #battery {
@@ -105,6 +107,7 @@ window#waybar.chromium {
     background-color: #CDCDCD;
     color: #000000;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;    
 }
 
 #battery.charging {
@@ -135,27 +138,31 @@ label:focus {
 
 #cpu {
 	border: 10px solid transparent;
-    background-color: #404552;
+    background-color: #383c4a;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
     /*color: #000000;*/
 }
 
 #memory {
 	border: 10px solid transparent;
-    background-color: #4b5162;
+    background-color: #404552;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #backlight {
 	border: 10px solid transparent;
     background-color: #CDCDCD;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #network {
 	border: 10px solid transparent;
-    background-color: #4b5162;
+    background-color: #404552;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #network.disconnected {
@@ -164,9 +171,10 @@ label:focus {
 
 #pulseaudio {
 	border: 10px solid transparent;
-    background-color: #7c818c;
-    /*color: #000000;*/
+   	/* color: black; */
+    background-color: #4b5162;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #pulseaudio.muted {
@@ -190,10 +198,23 @@ label:focus {
     background-color: #ffa000;
 }
 
+#custom-weather {
+	border: 10px solid transparent;
+	/* color: black; */
+    background-color: #4b5162;
+    padding: 0 7px 0 7px;
+    border-radius: 15px;
+    margin: 0 -5px 0 -5px;
+}
+
 #temperature {
 	border: 10px solid transparent;
-    background-color: #7c818c;
-	border-radius: 15px;
+	color: black;
+    background-color: #CDCDCD;
+    /*color: #000000;*/
+    padding: 0 7px 0 7px;
+    border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #temperature.critical {
@@ -204,16 +225,18 @@ label:focus {
 	border: 10px solid transparent;
     background-color: #5294e2;
     border-radius: 15px;
+    margin-left: -5px;
 }
 
 #idle_inhibitor {
 	border: 10px solid transparent;
-    background-color: #404552;
+    background-color: #7c818c;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    background-color: #cdcdcd;
     color: #2d3436;
 }
 
@@ -222,6 +245,15 @@ label:focus {
     background-color: #66cc99;
     color: #2a5c45;
     border-radius: 15px;
+    margin: 0 -5px 0 -5px;
+}
+
+#disk {
+	border: 10px solid transparent;
+	padding: 0 7px 0 7px;
+    background-color: #7c818c;
+    border-radius: 15px;
+    margin: 0 -5px 0 -5px;
 }
 
 #mpd.disconnected {

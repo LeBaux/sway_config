@@ -9,7 +9,8 @@
 exec /usr/lib/kdeconnectd
 exec kdeconnect-indicator
 #exec ulauncher --hide-window
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
+exec razerd
 exec kded5
 
 # Floating windows
@@ -41,10 +42,15 @@ set $menu wofi --dmenu --width=30% --height=20% --show run -I  --
 
 # Disable titlebar
 
-default_border pixel 3
+default_border pixel 2
 # Set inner/feher gaps
 gaps inner 15
 gaps outer 0
+
+# Default orientation
+
+exec i3-msg split v
+default_orientation vertical
 
 # Window decoration
 
@@ -54,6 +60,13 @@ client.focused_inactive #383c4a #5f676a #ffffff #7c818c   #383c4a
 client.unfocused        #383c4a #222222 #888888 #7c818c   #383c4a
 client.urgent           #7c818c #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+#Asignments
+
+assign [app_id="lutris"] 4
+assign [app_id="gamehub"] 4
+assign [app_id="steam"] 4
+assign [app_id="signal"] 5
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -75,11 +88,11 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-         # timeout 300 'swaylock -f -c 000000' \
-         # timeout 600 'swaymsg "output * dpms off"' \
-              # resume 'swaymsg "output * dpms on"' \
-         # before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 800 'swaylock -f -c 000000' \
+         timeout 1000 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -113,7 +126,7 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
     bindsym $mod+Space exec $menu
 
 	# Launch Dolphin
-	bindsym $mod+d exec dolphin
+	# bindsym $mod+d exec dolphin
 	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -204,10 +217,9 @@ output "*" bg ~/wallpapers/minimal_mountain.jpg fill
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    # Quasi Alternating(Fibonacci) Layout
+    # Back and Forth
 
-    default_orientation vertical
-    for_window [class=".*"] split toggle 
+	bindsym $mod+d workspace back_and_forth
 #
 # Scratchpad:
 #
