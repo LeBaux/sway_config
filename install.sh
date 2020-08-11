@@ -1,7 +1,8 @@
 #!/bin/bash
 
 CONFIG=~/.config/
-
+YES="y"
+NO="n"
 # Copy config files to .config folder
 
 echo "The following directories are about to be move in ~/.config"
@@ -11,28 +12,26 @@ echo "waybar"
 echo "wofi"
 echo -e "Do you want to continue? (y/n)"
 read ans
+while [ "$ans" != "$YES" ]
+do
+if [ "$ans" == "$YES" ]; then
+    echo "Moving directories"
+    break
+fi
+if [ "$ans" == "$NO" ]; then
+  exit
+fi
+echo -e "Please input your answer correctly (y/n)"
+read ans
+done
+# cp -r ./wallpapers ~/
 
-unit [$ans = "yes]
-  do
-  if [$ans="yes" || $ans ="y"] 
-    then
-      echo "Moving directories"
-      break
-  fi
-  if [$ans="no" || $ans="n"]
-    then
-      exit
-    fi
-  done
+# cp -r ./termite $CONFIG
 
-cp -r ./wallpapers ~/
+# cp -r ./sway $CONFIG
 
-cp -r ./termite CONFIG
+# cp -r ./waybar $CONFIG
 
-cp -r ./sway CONFIG
-
-cp -r ./waybar CONFIG
-
-cp -r ./wofi CONFIG
+# cp -r ./wofi CONFIG
 
 echo "Done!"
