@@ -24,14 +24,15 @@ fi
 echo -e "Please input your answer correctly (y/n)"
 read ans
 done
-# cp -r ./wallpapers ~/
 
-# cp -r ./termite $CONFIG
+cp -r ./wallpapers ~/
 
-# cp -r ./sway $CONFIG
+cp -r ./termite $CONFIG
 
-# cp -r ./waybar $CONFIG
+cp -r ./sway $CONFIG
 
-# cp -r ./wofi CONFIG
+cp -r ./waybar $CONFIG
+
+cp -r ./wofi CONFIG
 
 echo "Done!"
