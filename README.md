@@ -9,7 +9,8 @@
 	<li>wofi</li>
 	<li>brightnessctl</li>
   <li>swaylock-effects</li>
-	<li><a href='https://github.com/AppleDesignResources/SanFranciscoFont'>font</a></li>
+	<li>material icons</li>
+	<li>product sans or google sans</li>
 </ul>
 <h5>Install config files</h5>
 <ol>
