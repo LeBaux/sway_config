@@ -162,7 +162,7 @@
     },
     "custom/name": {
       "format": " bryan",
-      "on-click": "wofi --dmenu --width=30% --height=20% --show run --"
+      "on-click": "wofi --dmenu --width=10% --height=20% --yoffset=10% --xoffset=10% --show run --"
     },
     "custom/weather": {
         "exec": "curl 'https://wttr.in/?format=1'",

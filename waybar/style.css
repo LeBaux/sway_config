@@ -102,7 +102,7 @@ window#waybar.chromium {
 #custom-name {
 
     background-color: #5294e2;
-	margin: 11.5 0 11.5 10;
+	margin: 11 0 11 10;
 	padding: 3px 8px 3px 8px;
 	border-radius: 5px;
     border: 1px solid #ffffff;
@@ -198,8 +198,8 @@ label:focus {
 }
 
 #custom-weather {
-	  border: 11px solid transparent;
-    background-color: #9aacb8;
+	border: 11px solid transparent;
+    background-color: #eea990;
     padding: 0 7px 0 7px;
     border-radius: 15px;
     margin: 0 -5px 0 -5px;

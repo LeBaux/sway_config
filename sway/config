@@ -23,7 +23,7 @@ for_window [app_id="plasmashell" window_type="notification"] floating enable
 no_focus [app_id="plasmashell" window_type="notification"] floating enable
 for_window [title="wine"] floating enable
 for_window [title="epic"] floating enable
-for_window [workspace="4"] layout stacked 
+for_window [workspace="4"] layout stacking 
 
 ### Variables
 #
@@ -78,7 +78,7 @@ assign [app_id="signal-desktop"] 5
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg ~/wallpapers/skull-no-watermark.jpg fill
+output "*" bg ~/wallpapers/skull.jpg fill
 #
 # Example configuration:
 #
