@@ -4,7 +4,7 @@
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1260, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
+    "modules-left": ["custom/name","sway/workspaces", "sway/mode", "custom/media", "sway/window"],
     "modules-center": [],
     "modules-right": ["idle_inhibitor", "disk", "custom/weather", "pulseaudio", "network", "memory", "cpu", "temperature", "backlight", "battery#bat2", "clock", "tray"],
     // Modules configuration
@@ -18,7 +18,8 @@
          	"3": ["HDMI-A-1"],
             "4": ["HDMI-A-1"],
             "5": ["HDMI-A-1"],
-            "6": ["HDMI-A-1"]
+            "6": ["HDMI-A-1"],
+            "7": ["HDMI-A-1"]
          },
          "format-icons": {
              "1": "",
@@ -27,6 +28,7 @@
              "4": "",
              "5": "",
              "6": "",
+             "7": "",
              "focused": "",
              "urgent": "",
              "default": ""
@@ -157,6 +159,10 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/name": {
+      "format": " bryan",
+      "on-click": "wofi --dmenu --width=30% --height=20% --show run --"
     },
     "custom/weather": {
         "exec": "curl 'https://wttr.in/?format=1'",

@@ -8,9 +8,9 @@
 	<li>kdeconnect</li>
 	<li>wofi</li>
 	<li>brightnessctl</li>
+  <li>swaylock-effects</li>
 	<li><a href='https://github.com/AppleDesignResources/SanFranciscoFont'>font</a></li>
 </ul>
-All available on Arch's repositories
 <h5>Install config files</h5>
 <ol>
 	<li>git clone https://github.com/snakedye/sway_config.git</li>
